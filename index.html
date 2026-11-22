@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>TableSweep - Export Web Tables and Lists to CSV and Excel</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0f766e;
+      --accent-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --border: #334155;
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --accent: #14b8a6;
+        --accent-text: #042f2e;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    header {
+      margin-bottom: 36px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      margin: 0 0 8px;
+    }
+    .card p, .card ul {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .card ul {
+      padding-left: 18px;
+    }
+    .card li {
+      margin-bottom: 6px;
+    }
+    footer {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>TableSweep</h1>
+      <p class="lead">
+        A fast Chrome extension that extracts tables, data grids, and repeating lists from any webpage into clean CSV, Excel (.xlsx), JSON, or Markdown files.
+      </p>
+      <span class="badge">Chrome Extension - Local and Private</span>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Works on Modern Sites</h2>
+        <p>Captures classic HTML tables, ARIA/React data grids, and repeating card lists using the built-in visual picker.</p>
+      </div>
+      <div class="card">
+        <h2>Excel-Safe Exports</h2>
+        <p>Includes UTF-8 BOM for international characters, preserves leading zeros and long numeric IDs, and aligns merged cells.</p>
+      </div>
+      <div class="card">
+        <h2>Private by Design</h2>
+        <p>All table parsing and file generation runs locally in your browser. Webpage contents are never sent to external servers.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Free Version</h2>
+        <ul>
+          <li>Unlimited exports for tables up to 50 rows</li>
+          <li>3 full daily exports for tables of any size</li>
+          <li>CSV, TSV, clipboard copy, column selector, and visual picker</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>TableSweep Pro ($9 one-time)</h2>
+        <ul>
+          <li>Unlimited daily exports of any size</li>
+          <li>Native Excel (.xlsx) with frozen headers and auto-sized columns</li>
+          <li>JSON and Markdown exports</li>
+          <li>Multi-page batch capture with duplicate removal</li>
+          <li>Inline column renaming before export</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <span>Support: <a href="mailto:tablesweep.support@gmail.com">tablesweep.support@gmail.com</a></span>
+      <span><a href="./PRIVACY_POLICY.html">Privacy Policy</a></span>
+    </footer>
+  </main>
+</body>
+</html>
